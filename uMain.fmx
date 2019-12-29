@@ -1,0 +1,114 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Base64 Test'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Label1: TLabel
+    Align = Top
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 2.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 5.000000000000000000
+    Size.Width = 630.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Original text:'
+    TabOrder = 0
+  end
+  object edtText: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
+    TabOrder = 1
+    Position.X = 5.000000000000000000
+    Position.Y = 26.000000000000000000
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 2.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 2.000000000000000000
+    Size.Width = 630.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnChangeTracking = edtTextChangeTracking
+  end
+  object Label2: TLabel
+    Align = Top
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 2.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 2.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 52.000000000000000000
+    Size.Width = 630.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Encoded text:'
+    TabOrder = 2
+  end
+  object edtEncode: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
+    TabOrder = 3
+    ReadOnly = True
+    Position.X = 5.000000000000000000
+    Position.Y = 73.000000000000000000
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 2.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 2.000000000000000000
+    Size.Width = 630.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label3: TLabel
+    Align = Top
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 2.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 2.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 99.000000000000000000
+    Size.Width = 630.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Decoded text:'
+    TabOrder = 4
+  end
+  object edtDecode: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
+    TabOrder = 5
+    ReadOnly = True
+    Position.X = 5.000000000000000000
+    Position.Y = 120.000000000000000000
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 2.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 2.000000000000000000
+    Size.Width = 630.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object chkTerminateWithEqualSigns: TCheckBox
+    Align = Top
+    IsChecked = True
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 2.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 146.000000000000000000
+    Size.Width = 630.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Text = 'Terminate encoding with equal signs'
+    OnChange = chkTerminateWithEqualSignsChange
+  end
+end
