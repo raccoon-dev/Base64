@@ -18,6 +18,7 @@ type TBase64 = class
   public
     class function Encode(Bytes: TBytes; TerminateWithEqualSigns: Boolean = True) : string;
     class function Decode(EncodedText: string): TBytes;
+    class function NewLineAfterColumn(EncodedText: string; Column: Integer): string;
 end;
 
 implementation
@@ -45,6 +46,30 @@ begin
     finally
       Free;
     end;
+end;
+
+class function TBase64.NewLineAfterColumn(EncodedText: string;
+  Column: Integer): string;
+var
+  sb: TStringBuilder;
+begin
+  if Column > 0 then
+  begin
+    sb := TStringBuilder.Create;
+    try
+      while(EncodedText.Length > 0)do
+      begin
+        sb.Append(EncodedText.Substring(0, Column));
+        EncodedText := EncodedText.Remove(0, Column);
+        if EncodedText.Length > 0 then
+          sb.AppendLine;
+      end;
+      Result := sb.ToString;
+    finally
+      sb.Free;
+    end;
+  end else
+    Result := EncodedText;
 end;
 
 function TBase64._Decode(EncodedText: string): TBytes;

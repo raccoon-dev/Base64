@@ -7,6 +7,9 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Edit,
   FMX.Controls.Presentation, FMX.StdCtrls;
 
+const
+  MAX_COLUMN = 20;
+
 type
   TfrmMain = class(TForm)
     Label1: TLabel;
@@ -42,7 +45,11 @@ end;
 
 procedure TfrmMain.DoTest;
 begin
-  edtEncode.Text := TBase64.Encode(TEncoding.UTF8.GetBytes(edtText.Text), chkTerminateWithEqualSigns.IsChecked);
+  edtEncode.Text := TBase64.NewLineAfterColumn(
+                      TBase64.Encode(
+                        TEncoding.UTF8.GetBytes(edtText.Text),
+                        chkTerminateWithEqualSigns.IsChecked),
+                      MAX_COLUMN);
   try
     edtDecode.Text := TEncoding.UTF8.GetString(TBase64.Decode(edtEncode.Text));
   except

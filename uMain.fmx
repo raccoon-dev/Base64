@@ -56,6 +56,7 @@ object frmMain: TfrmMain
     Align = Top
     TabOrder = 3
     ReadOnly = True
+    TextSettings.VertAlign = Leading
     Position.X = 5.000000000000000000
     Position.Y = 73.000000000000000000
     Margins.Left = 5.000000000000000000
@@ -63,7 +64,7 @@ object frmMain: TfrmMain
     Margins.Right = 5.000000000000000000
     Margins.Bottom = 2.000000000000000000
     Size.Width = 630.000000000000000000
-    Size.Height = 22.000000000000000000
+    Size.Height = 88.000000000000000000
     Size.PlatformDefault = False
   end
   object Label3: TLabel
@@ -73,7 +74,7 @@ object frmMain: TfrmMain
     Margins.Right = 5.000000000000000000
     Margins.Bottom = 2.000000000000000000
     Position.X = 5.000000000000000000
-    Position.Y = 99.000000000000000000
+    Position.Y = 165.000000000000000000
     Size.Width = 630.000000000000000000
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
@@ -86,7 +87,7 @@ object frmMain: TfrmMain
     TabOrder = 5
     ReadOnly = True
     Position.X = 5.000000000000000000
-    Position.Y = 120.000000000000000000
+    Position.Y = 186.000000000000000000
     Margins.Left = 5.000000000000000000
     Margins.Top = 2.000000000000000000
     Margins.Right = 5.000000000000000000
@@ -103,7 +104,7 @@ object frmMain: TfrmMain
     Margins.Right = 5.000000000000000000
     Margins.Bottom = 5.000000000000000000
     Position.X = 5.000000000000000000
-    Position.Y = 146.000000000000000000
+    Position.Y = 212.000000000000000000
     Size.Width = 630.000000000000000000
     Size.Height = 19.000000000000000000
     Size.PlatformDefault = False
